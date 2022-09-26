@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'package:linkedin/utils/constants/typography.dart';
+
+class CustomButton extends StatelessWidget {
+  final String childText;
+  final Color backgroundColor;
+  final Color textColor;
+  // final Size size;
+
+  const CustomButton({
+    Key? key,
+    required this.backgroundColor,
+    required this.childText,
+    required this.textColor,
+    // required this.size,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {},
+      style: ElevatedButton.styleFrom(
+          maximumSize: const Size(320, 60),
+          minimumSize: const Size(260, 50),
+          backgroundColor: backgroundColor,
+          padding: const EdgeInsets.symmetric(vertical: 15),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+      child: Text(
+        childText.toUpperCase(),
+        style: button,
+      ),
+    );
+  }
+}
