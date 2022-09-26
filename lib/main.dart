@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:linkedin/screens/login_screen.dart';
 import 'package:linkedin/screens/verify_screen.dart';
+import 'package:linkedin/ui/screens/signup/signup_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,6 +19,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData(
+        fontFamily: 'DM Sans'
+      ),
       initialRoute: homeRoute,
       routes: <String, WidgetBuilder>{
         homeRoute: (context) => const HomeScreen(),
