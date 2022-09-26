@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "169055488132",
+    "project_id": "auth-7f386",
+    "storage_bucket": "auth-7f386.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169055488132:android:4294625681e1d8b5ec5ad1",
+        "android_client_info": {
+          "package_name": "com.example.linkedin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169055488132-0l36t0vkp6k9v9ktk7mjg9ntmfa7j70u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6Zjga1s_WAqcdgUorM_kge1BMS86f1vY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169055488132-0l36t0vkp6k9v9ktk7mjg9ntmfa7j70u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "169055488132-b5a5mmkpe39srqn6i007b80m32buseh4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.linkedin"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
