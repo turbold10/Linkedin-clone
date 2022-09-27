@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:linkedin/utils/routes.dart';
-import 'package:linkedin/screens/home_screen.dart';
+import 'package:linkedin/ui/screens/home/home_screen.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:linkedin/screens/login_screen.dart';
-import 'package:linkedin/screens/verify_screen.dart';
-import 'package:linkedin/ui/screens/signup/signup_screen.dart';
+import 'package:linkedin/ui/screens/login_screen.dart';
+import 'package:linkedin/ui/screens/verify_screen.dart';
+import 'package:linkedin/ui/screens/profile/profile_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,16 +19,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      theme: ThemeData(
-        fontFamily: 'DM Sans'
-      ),
-      initialRoute: homeRoute,
+      theme: ThemeData(fontFamily: 'DM Sans'),
+      initialRoute: loginRoute,
       routes: <String, WidgetBuilder>{
         homeRoute: (context) => const HomeScreen(),
         loginRoute: (context) => const LoginScreen(),
         verifyRoute: (context) => const VerifyScreen(),
+        profileRoute: (context) => const ProfileScreen()
       },
     );
   }
 }
-  
