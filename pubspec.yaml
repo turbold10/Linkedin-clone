@@ -48,6 +48,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  firebase_auth: ^3.10.0
+  firebase_core: ^1.23.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -75,8 +77,3 @@ flutter:
     - family: DM Sans
       fonts:
         - asset: ./assets/fonts/DMSans-Regular.ttf
-        - asset: ./assets/fonts/DMSans-Bold.ttf
-          weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
