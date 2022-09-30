@@ -31,6 +31,7 @@ class CustomButton extends StatelessWidget {
       child: Text(
         childText.toUpperCase(),
         style: button,
+
       ),
     );
   }

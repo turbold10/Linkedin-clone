@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:linkedin/ui/custom_widgets/custom_avatar.dart';
+import 'package:linkedin/ui/custom_widgets/custom_job_card.dart';
 import 'package:linkedin/ui/screens/auth/verify_screen.dart';
 import 'package:linkedin/ui/custom_widgets/custom_button.dart';
 import 'package:linkedin/ui/custom_widgets/custom_input.dart';
@@ -22,7 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return SafeArea(
       child: (Scaffold(
         body: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 100),
+          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 100),
           child: Wrap(
             alignment: WrapAlignment.center,
             runSpacing: 40,
@@ -49,7 +51,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 backgroundColor: buttonPrimary,
                 textColor: buttonTextSecondary,
                 onPressed: _phoneAuth,
-              )
+              ),
+              CustomJobCard()
+              // CustomAvatar(background: Colors.black, size: 50,),
             ],
           ),
         ),
