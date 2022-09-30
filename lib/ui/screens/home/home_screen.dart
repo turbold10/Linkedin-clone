@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:linkedin/ui/custom_widgets/custom_button.dart';
 import 'package:linkedin/ui/screens/auth/login_screen.dart';
+import 'package:linkedin/utils/constants/color_constants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -17,11 +19,13 @@ class _HomeScreenState extends State<HomeScreen> {
           body: Column(
         children: [
           const Text('HOME'),
-          MaterialButton(
+          CustomButton(
+              backgroundColor: buttonPrimary,
+              textColor: buttonTextPrimary,
               onPressed: ((() {
                 Get.to(const LoginScreen());
               })),
-              child: const Text('go to login'))
+              childText: 'go to login')
         ],
       ))),
     );
