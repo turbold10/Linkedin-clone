@@ -3,22 +3,24 @@ import 'package:linkedin/utils/constants/typography.dart';
 
 class CustomButton extends StatelessWidget {
   final String childText;
-  final Color backgroundColor;
-  final Color textColor;
+  final Color? backgroundColor;
+  final Color? textColor;
+  final Function()? onPressed;
   // final Size size;
 
   const CustomButton({
     Key? key,
-    required this.backgroundColor,
+    this.backgroundColor,
+    this.textColor,
+    this.onPressed,
     required this.childText,
-    required this.textColor,
     // required this.size,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
           maximumSize: const Size(320, 60),
           minimumSize: const Size(260, 50),
@@ -29,6 +31,7 @@ class CustomButton extends StatelessWidget {
       child: Text(
         childText.toUpperCase(),
         style: button,
+
       ),
     );
   }
