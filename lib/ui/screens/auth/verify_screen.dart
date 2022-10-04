@@ -4,7 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:linkedin/ui/custom_widgets/custom_button.dart';
 import 'package:linkedin/ui/custom_widgets/custom_input.dart';
 import 'package:linkedin/utils/constants/color_constants.dart';
-import '../../../utils/sp_manager.dart';
+import 'package:linkedin/utils/routes.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class VerifyScreen extends StatefulWidget {
   const VerifyScreen({Key? key}) : super(key: key);
@@ -43,9 +44,11 @@ class _VerifyScreenState extends State<VerifyScreen> {
                             verificationId: _incomingData['verifyCode'] ?? '',
                             smsCode: verifyCode));
                     if (value.user != null) {
-                      print('worked');
-                      SpManager sharedPreference = SpManager();
-                      await sharedPreference.init();
+                      String? uid = value.user?.uid;
+                      final SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+                      sharedPreferences.setString('uid', uid!);
+                      print(uid);
+                      Get.to(mainRoute);
                     }
                   } catch (e) {
                     print(e);

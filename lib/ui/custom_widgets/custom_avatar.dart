@@ -1,38 +1,32 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class CustomAvatar extends StatelessWidget {
-  final double? size;
-  final Image? image;
-  final String? letter;
-  final IconData? icon;
-  final Color? background;
-  const CustomAvatar(
-      {Key? key,
-      this.size,
-      this.image,
-      this.letter,
-      this.icon,
-      this.background})
-      : super(key: key);
+  final String imageUrl;
+  final double radius;
+  const CustomAvatar({
+    Key? key,
+    required this.imageUrl,
+    required this.radius,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      backgroundColor: background,
-      child: SizedBox(
-        width: size,
-        height: size,
-        child: ClipOval(child: image),
+    return (Container(
+      width: radius * 2,
+      height: radius * 2,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(radius),
       ),
-    );
-    // return Container(
-    //     width: size,
-    //     height: size,
-    //     alignment: Alignment.topLeft,
-    //     // color: background,
-
-    //     child: Circle(
-    //       decoration: BoxDecoration(shape: BoxShape.circle, color: background),
-    //     ));
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(radius),
+        child: CachedNetworkImage(
+          imageUrl: imageUrl,
+          placeholder: ((context, url) => const CircularProgressIndicator()),
+          fit: BoxFit.cover,
+        ),
+      ),
+    ));
   }
 }

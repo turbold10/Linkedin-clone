@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:linkedin/ui/custom_widgets/custom_avatar.dart';
-import 'package:linkedin/ui/custom_widgets/custom_job_card.dart';
 import 'package:linkedin/ui/screens/auth/verify_screen.dart';
 import 'package:linkedin/ui/custom_widgets/custom_button.dart';
 import 'package:linkedin/ui/custom_widgets/custom_input.dart';
@@ -52,8 +50,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 textColor: buttonTextSecondary,
                 onPressed: _phoneAuth,
               ),
-              CustomJobCard()
-              // CustomAvatar(background: Colors.black, size: 50,),
             ],
           ),
         ),
