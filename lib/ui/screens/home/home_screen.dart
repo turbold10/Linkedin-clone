@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:linkedin/ui/custom_widgets/custom_button.dart';
 import 'package:linkedin/ui/custom_widgets/custom_job_card.dart';
-import 'package:linkedin/ui/screens/auth/login_screen.dart';
-import 'package:linkedin/utils/constants/color_constants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -18,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
         child: (Scaffold(
       body: Container(
-        color: Color(0xffE5E5E5),
+        // color: Color(0xffE5E5E5),
         child: Column(
           children: const [
             Text('Home'),

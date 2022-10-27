@@ -18,10 +18,10 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
 
   final List<IconData> _icons = [
-    Icons.home_filled,
+    Icons.home,
     Icons.connect_without_contact_outlined,
     Icons.add_circle_rounded,
-    Icons.chat,
+    Icons.chat_bubble_outline,
     Icons.bookmark_outline,
   ];
   static const List<String> _title = [
@@ -45,7 +45,13 @@ class _MainScreenState extends State<MainScreen> {
     });
     if (_selectedIndex == 2) {
       Get.bottomSheet(
-        CustomBottomSheet(),
+        const CustomBottomSheet(
+          primaryButtonText: 'post',
+          secondaryButtonText: 'make a job',
+          smallTitle: 'What would you like to add?',
+          description:
+              'Would you like to post your tips and experiences or create a job?',
+        ),
         isScrollControlled: true,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(35),

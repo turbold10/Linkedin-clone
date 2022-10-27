@@ -4,7 +4,19 @@ import 'package:linkedin/utils/constants/color_constants.dart';
 import 'custom_button.dart';
 
 class CustomBottomSheet extends StatelessWidget {
-  const CustomBottomSheet({super.key});
+  final String smallTitle;
+  final String description;
+  final String primaryButtonText;
+  final String secondaryButtonText;
+  final Function()? onPressed;
+  const CustomBottomSheet({
+    Key? key,
+    required this.smallTitle,
+    required this.description,
+    required this.primaryButtonText,
+    required this.secondaryButtonText,
+    this.onPressed,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,22 +27,24 @@ class CustomBottomSheet extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Text(
-              'What would you like to add?',
+            Text(
+              smallTitle,
               style: labelLarge,
+              textAlign: TextAlign.center,
             ),
-            const Text(
-              'Would you like to post your tips and experiences or create a job?',
+            Text(
+              description,
               style: bodyMedium,
+              textAlign: TextAlign.center,
             ),
             CustomButton(
-              childText: 'post',
+              childText: primaryButtonText,
               backgroundColor: buttonPrimary,
               textColor: buttonTextPrimary,
-              onPressed: () {},
+              onPressed: onPressed,
             ),
             CustomButton(
-              childText: 'make a job',
+              childText: secondaryButtonText,
               backgroundColor: buttonSecondary,
               textColor: buttonTextSecondary,
               onPressed: () {},
