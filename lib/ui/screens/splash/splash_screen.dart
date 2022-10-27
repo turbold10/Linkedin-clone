@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     // WidgetsBinding.instance.addPostFrameCallback((_) => _checkingUser());
     WidgetsBinding.instance.addPostFrameCallback(
-      (_) => _checkingUser(),
+      (_) => checkingUser(),
     );
   }
 
@@ -30,11 +30,10 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 
-  void _checkingUser() async {
+  void checkingUser() async {
     final SharedPreferences sharedPreferences =
         await SharedPreferences.getInstance();
     String userID = sharedPreferences.getString('uid') ?? '';
-    print(userID);
-    userID == '' ? Get.toNamed(loginRoute) : Get.toNamed(mainRoute);
+    Get.toNamed(userID == '' ? loginRoute : mainRoute);
   }
 }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:linkedin/ui/custom_widgets/custom_company_card.dart';
-import 'package:linkedin/ui/custom_widgets/custom_input.dart';
 
 class ConnectionScreen extends StatefulWidget {
   const ConnectionScreen({super.key});

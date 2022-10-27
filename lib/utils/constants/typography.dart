@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:linkedin/utils/constants/color_constants.dart';
 
 const TextStyle titleLarge = TextStyle(fontSize: 30, fontWeight: FontWeight.w700);
 const TextStyle titleMedium =
-    TextStyle(fontSize: 22, fontWeight: FontWeight.w700);
+    TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: titleColor);
 const TextStyle titleSmall =
     TextStyle(fontSize: 20, fontWeight: FontWeight.w700);
 const TextStyle labelLarge =
