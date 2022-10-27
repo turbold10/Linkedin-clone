@@ -45,7 +45,7 @@ class _MainScreenState extends State<MainScreen> {
     });
     if (_selectedIndex == 2) {
       Get.bottomSheet(
-        CustomBottomSheet(),
+        const CustomBottomSheet(),
         isScrollControlled: true,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(35),
