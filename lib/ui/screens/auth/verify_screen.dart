@@ -45,10 +45,11 @@ class _VerifyScreenState extends State<VerifyScreen> {
                             smsCode: verifyCode));
                     if (value.user != null) {
                       String? uid = value.user?.uid;
-                      final SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+                      final SharedPreferences sharedPreferences =
+                          await SharedPreferences.getInstance();
                       sharedPreferences.setString('uid', uid!);
                       print(uid);
-                      Get.to(mainRoute);
+                      Get.toNamed(mainRoute);
                     }
                   } catch (e) {
                     print(e);
